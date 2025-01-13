@@ -1,0 +1,23 @@
+
+<section class="flex w-1/2 flex-col gap-4 justify-center m-auto items-center mt-5 bg-slate-00">
+
+    <section class="flex flex-col gap-2 items-center">
+        <img src="profile1.jpg" alt="profile" class="w-36 overflow-hidden object-contain rounded-full">
+        <div class="w-48 flex flex-col items-center">
+            <h3 class="font-semibold text-2xl">{{userData.name}}</h3>
+            <h4 class="font-semibold text-gray-700">{{userData.location}}</h4>
+        </div>
+    </section>
+
+    <section class="flex flex-row justify-between gap-36 font-semibold">
+        <section class="flex flex-col gap-3">
+            <h4>Email : {{userData.email}}</h4>
+            <h4>Phone : {{userData.phone}}</h4>
+            <h4>Type : {{userData.type}}</h4>
+        </section>
+        <section class="flex flex-col gap-3">
+            <button class="p-2 bg-gray-900 text-white font-semibold rounded-md">Update Details</button>
+            <button (click)="logout()" class="p-2 bg-gray-900 text-white font-semibold rounded-md">Logout</button>
+        </section>
+    </section>
+</section>

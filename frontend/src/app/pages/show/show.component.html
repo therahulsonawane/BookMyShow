@@ -1,0 +1,58 @@
+<section class="p-3 w-[40%] m-auto mt-2">
+    <h3 class="font-bold text-2xl">Create Show</h3>
+  
+    <form
+      (ngSubmit)="onSubmit()"
+      class="border flex flex-col mt-8 mb-5 w-full px-5 py-12 gap-8 shadow-[0px_2px_12px_7px_#00000024] rounded-2xl"
+    >
+      <div class="flex flex-col gap-2">
+        <label for="time" class="text-xs font-semibold">Show Time</label>
+        <input
+          required
+          type="time"
+          name="time"
+          [(ngModel)]="ShowData.time"
+          class="p-3 text-xs bg-slate-100 rounded-md"
+          id="time"
+        />
+      </div>
+  
+      <div class="flex flex-col gap-2">
+        <label for="date" class="text-xs font-semibold">Show Date</label>
+        <input
+          required
+          type="date"
+          name="date"
+          [(ngModel)]="ShowData.date"
+          class="p-3 text-xs bg-slate-100 rounded-md"
+          id="date"
+        />
+      </div>
+  
+      <div class="flex flex-col gap-2">
+        <label for="scheduleEndDate" class="text-xs font-semibold">Schedule End Date</label>
+        <input
+          required
+          type="date"
+          name="scheduleEndDate"
+          [(ngModel)]="ShowData.scheduleEndDate"
+          class="p-3 text-xs bg-slate-100 rounded-md"
+          id="scheduleEndDate"
+        />
+      </div>
+  
+      <div class="flex flex-col gap-2">
+        <label for="movie" class="text-xs font-semibold">Movie ID</label>
+        <input
+          required
+          type="number"
+          name="movie"
+          [(ngModel)]="ShowData.movieId"
+          class="p-3 text-xs bg-slate-100 rounded-md"
+          placeholder="Enter Movie ID..."
+          id="movie"
+        />
+      </div>
+  
+     
+  

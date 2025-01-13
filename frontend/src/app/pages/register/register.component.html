@@ -1,0 +1,49 @@
+<section class="p-3 w-[40%] m-auto mt-2">
+
+    <h3 class="font-bold text-2xl">Sign Up</h3>
+
+    <form (ngSubmit)="onSubmit()"
+        class="border flex flex-col mt-8 mb-5 w-full px-5 py-12 gap-8 shadow-[0px_2px_12px_7px_#00000024] rounded-2xl">
+
+        <div class="flex flex-col gap-2">
+            <label for="" class="text-xs font-semibold">E-mail</label>
+            <input required type="email" name="email" [(ngModel)]="user.email" class="p-3 text-xs bg-slate-100 rounded-md"
+                placeholder="Enter your email here . . . " id="">
+        </div>
+        
+        <div class="flex flex-col gap-2">
+            <label for="" class="text-xs font-semibold">Full Name</label>
+            <input required type="text" name="name" [(ngModel)]="user.name" class="p-3 text-xs bg-slate-100 rounded-md"
+                placeholder="Enter your full name here . . . " id="">
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label for="" class="text-xs font-semibold">Username</label>
+            <input required type="text" name="username" [(ngModel)]="user.username" class="p-3 text-xs bg-slate-100 rounded-md"
+                placeholder="Enter your username here . . . " id="">
+        </div>
+        
+        <div class="flex flex-col gap-2">
+            <label for="" class="text-xs font-semibold">Phone</label>
+            <input required type="tel" name="phone" [(ngModel)]="user.phone" class="p-3 text-xs bg-slate-100 rounded-md"
+                placeholder="Enter your phone number here . . . " id="">
+        </div>
+        
+        <div class="flex flex-col gap-2">
+            <label for="" class="text-xs font-semibold">Location</label>
+            <input required type="text" name="location" [(ngModel)]="user.location" class="p-3 text-xs bg-slate-100 rounded-md"
+                placeholder="Enter your location here . . . " id="">
+        </div>
+
+        <div class="flex flex-col gap-2">
+            <label class="text-xs font-semibold" for="">Password</label>
+            <input required type="password" [(ngModel)]="user.password" name="password" class="p-3 text-xs bg-slate-100 rounded-md"
+                placeholder="Enter your password here . . . " id="">
+        </div>
+
+        <button type="submit" class="bg-red-600 p-3 rounded-md font-semibold text-xs text-white">Sign Up</button>
+
+    </form>
+    <p class="p-3 mt-5 text-xs  flex gap-2">Have an account?<a class="underline" href="/login">Sign In</a></p>
+
+</section>

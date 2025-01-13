@@ -1,0 +1,70 @@
+<header class="flex flex-col w-full">
+
+  <section class="flex flex-row justify-between px-20 py-2 bg-white">
+
+    <section class="flex gap-2 items-center justify-items-center justify-center">
+      <a href="/home" class="w-48">
+        <img src="logo.png" alt="BookMyShow" class="items-center object-cover">
+      </a>
+      <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities"
+        class="py-2 pl-4 pr-36 w-full text-sm outline-none rounded-sm border">
+    </section>
+
+    <section class="flex gap-4 justify-center items-center">
+
+      <select name="Sity" class="bg-transparent">
+        <option value="pune">Pune</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="delhi">Delhi</option>
+      </select>
+
+      @if (token != null) {
+      <a [routerLink]="['/user-profile']" class="w-12 h-auto bg-slate-300 rounded-full">
+        <img src="profile1.jpg" alt="profile picture" class="object-cover">
+      </a>
+
+      }@else{
+      <a href="/login" class="bg-red-600 text-white p-2 rounded-md text-xs">Sign in</a>
+      }
+
+      <div class="ml-3">
+        menu
+      </div>
+
+    </section>
+
+  </section>
+
+  <nav class="flex flex-row p-2 justify-between text-sm bg-gray-200 px-20 py-2">
+
+    <section class="flex gap-6 outline-none">
+      <a href="#">Movies</a>
+      <a href="#">Stream</a>
+      <a href="#">Events</a>
+      <a href="#">Plays</a>
+      <a href="#">Sports</a>
+    </section>
+
+    <section class="flex gap-6">
+      <a href="#">Activities</a>
+      <a href="#">ListYourShow</a>
+      <a href="#">Corporates</a>
+      <a href="#">Offers</a>
+      <a href="#">Gift Cards</a>
+    </section>
+  </nav>
+
+  @if (userInfo.type === "ADMIN") {
+  <nav class="flex flex-row p-2 justify-between text-sm bg-gray-400 px-20 py-2">
+    <section class="flex gap-6 outline-none">
+    </section>
+    <section class="flex gap-6">
+      <a href="#">Update User</a>
+      <a [routerLink]="['/create-movie']">Create Movie</a>
+      <a [routerLink]="['/create-theater']">Create Theater</a>
+      <a [routerLink]="['/create-show']">Create Show</a>
+    </section>
+  </nav>
+  }
+
+</header>

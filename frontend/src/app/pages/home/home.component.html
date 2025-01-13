@@ -1,0 +1,31 @@
+<div class="w-full mt-9 m-auto bg-slate-50">
+  <div class="overflow-hidden w-[95%] m-auto rounded-md relative">
+    <div class="flex ease-out duration-700 rounded-lg" [style.transform]="'translateX(-'+ current * 100 +'%)'">
+      @for (item of images; track $index) {
+      <img [src]="item" alt="img" class="rounded-lg w-full flex-shrink-0">
+      }
+    </div>
+
+    <div class="absolute top-0 h-full w-full justify-between items-center flex px-10">
+      <button (click)="previousSlide()" class="text-2xl font-semibold text-white rounded-md">
+        <ng-icon name="bootstrapArrowLeftCircleFill" class="border-2 rounded-full border-gray-600" />
+      </button>
+
+      <button (click)="nextSlide()" class="text-2xl font-semibold text-white rounded-md">
+        <ng-icon name="bootstrapArrowRightCircleFill" class="border-2 rounded-full border-gray-600" />
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<section class="w-10/12 px-12 m-auto py-5 mt-3">
+  <h2 class="text-2xl font-semibold mb-4">Recommended Movies</h2>
+
+  <section class="flex flex-row items-start m-auto flex-wrap gap-11">
+    @for (item of moviesData; track $index) {
+      <app-card [moviesData]="item" />
+    }
+
+  </section>
+</section>

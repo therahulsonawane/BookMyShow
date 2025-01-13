@@ -1,0 +1,45 @@
+<section class="w-full">
+
+    <div class="w-full flex flex-col">
+
+        <div class="w-full relative">
+          <div 
+            class="w-full bg-cover absolute h-[400px] z-0" 
+            id="bg-image">
+          </div>
+
+          <div class="z-10 relative flex flex-row h-[400px] pl-28 items-center my-auto " id="poster">
+            <div class="bg-gray-900 rounded-xl text-white">
+                <img [src]="movie.img" [alt]="movie.title" class="h-auto max-h-[300px]">
+                <p class="p-2 text-center text-lg font-semibold">In Cinemas</p>
+            </div>
+
+            <div class="text-white mt-4 px-4">
+              <h1 class="text-3xl font-bold">{{ movie.title }}</h1>
+
+              <h3 class="p-3 px-6 font-semibold my-3 bg-white w-fit text-center text-black rounded-md">Rating  {{movie.rating | number: '1.1-1'}} / 10.0</h3>
+
+              <p class="font-semibold">{{ movie.genre }}</p>
+            </div>
+
+          </div>
+        </div>
+      
+        <div class="p-4 mt-5 w-10/12 ml-7">
+            <h3 class="font-semibold text-xl my-4">Description</h3>
+          <p class="font-semibold text-gray-700">{{ movie.description }}</p>
+        </div>
+      
+      </div>
+      
+
+    <div class="">
+        <h3>All Movie Data and other booking related data</h3>
+    </div>
+
+</section>
+
+<!-- 
+  yadneshj@lentra.ai
+  anilmali@lentra.ai 
+-->

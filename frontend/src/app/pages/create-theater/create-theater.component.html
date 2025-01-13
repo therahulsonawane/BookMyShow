@@ -1,0 +1,52 @@
+<section class="p-3 w-[40%] m-auto mt-2">
+    <h3 class="font-bold text-2xl">Create Theater</h3>
+  
+    <form
+      (ngSubmit)="onSubmit()"
+      class="border flex flex-col mt-8 mb-5 w-full px-5 py-12 gap-8 shadow-[0px_2px_12px_7px_#00000024] rounded-2xl"
+    >
+      <div class="flex flex-col gap-2">
+        <label for="name" class="text-xs font-semibold">Theater Name</label>
+        <input
+          required
+          type="text"
+          name="name"
+          [(ngModel)]="TheaterData.name"
+          class="p-3 text-xs bg-slate-100 rounded-md"
+          placeholder="Enter theater name here..."
+          id="name"
+        />
+      </div>
+  
+      <div class="flex flex-col gap-2">
+        <label for="address" class="text-xs font-semibold">Address</label>
+        <textarea
+          required
+          name="address"
+          [(ngModel)]="TheaterData.address"
+          class="p-3 text-xs bg-slate-100 rounded-md"
+          placeholder="Enter theater address here..."
+          id="address"
+        ></textarea>
+      </div>
+  
+      <div class="flex flex-col gap-2">
+        <label for="shows" class="text-xs font-semibold">Shows</label>
+        <textarea
+          name="shows"
+          [(ngModel)]="TheaterData.shows"
+          class="p-3 text-xs bg-slate-100 rounded-md"
+          placeholder="Enter show details (optional)..."
+          id="shows"
+        ></textarea>
+      </div>
+  
+      <button
+        type="submit"
+        class="bg-red-600 p-3 rounded-md font-semibold text-xs text-white"
+      >
+        Submit
+      </button>
+    </form>
+  </section>
+  

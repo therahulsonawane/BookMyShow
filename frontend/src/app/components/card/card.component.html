@@ -1,0 +1,18 @@
+<button (click)="moviesNavigate(moviesData.title)">
+  <div class="bg-white w-fit shadow-md rounded-lg overflow-hidden duration-300 hover:scale-105">
+
+    <div class="w-fit">
+      <img [src]="moviesData.img" alt=" poster" class="h-80 object-contain ">
+      <div class="flex items-center p-2 gap-2 bg-gray-500 text-white text-xs font-bold">
+        <ng-icon name="bootstrapStarFill" />
+        <p> {{moviesData.rating}} / 10.0</p>
+      </div>
+    </div>
+    <div class="p-2">
+      <h3 class="text-sm font-semibold">{{ moviesData.title | slice:0:30 }}{{ moviesData.title.length > 20 ? '...' : ''
+        }}</h3>
+      <h4 class="text-xs text-gray-600">{{ moviesData.genre| slice:0:34 }}{{ moviesData.title.length > 20 ? '...' : ''
+        }}</h4>
+    </div>
+  </div>
+</button>

@@ -1,0 +1,10 @@
+#bg-image{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/021/850/617/non_2x/realistic-cinema-poster-vector.jpg');   
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    
+}
+
+#poster{
+    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(26, 18, 18));
+}
